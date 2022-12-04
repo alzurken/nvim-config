@@ -19,7 +19,7 @@ keymap.set("n", "<leader>tp", ":tabp<CR>")
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- neo-tree
-keymap.set("n", "<leader>e", "::Neotree toggle<CR>")
+keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")

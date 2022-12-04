@@ -22,6 +22,8 @@ neotree.setup({
   window = {
     position = "left",
     width = 40,
+    mappings = {
+    }
   },
   filesystem = {
     follow_current_file = true,
