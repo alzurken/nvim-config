@@ -51,23 +51,24 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make"})
 
   -- autocompletion
+
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
   use("hrsh7th/cmp-cmdline")
   use("saadparwaiz1/cmp_luasnip")
-  use("petertriho/cmp-git")
-  use("davidsierradz/cmp-conventionalcommits")
-  use("Dosx001/cmp-commit")
+--  use("petertriho/cmp-git")
+--  use("davidsierradz/cmp-conventionalcommits")
+--  use("Dosx001/cmp-commit")
 
-  use("tzachar/fuzzy.nvim")
-  use("tzachar/cmp-fuzzy-buffer")
-  use("tzachar/cmp-fuzzy-path")
-  use("lukas-reineke/cmp-rg")
+--  use("tzachar/fuzzy.nvim")
+--  use("tzachar/cmp-fuzzy-buffer")
+--  use("tzachar/cmp-fuzzy-path")
+--  use("lukas-reineke/cmp-rg")
 
-  use("hrsh7th/cmp-nvim-lua")
-  use("KadoBOT/cmp-plugins")
-  use("ray-x/cmp-treesitter")
+--  use("hrsh7th/cmp-nvim-lua")
+--  use("KadoBOT/cmp-plugins")
+--  use("ray-x/cmp-treesitter")
 
   -- snippets
   use("L3MON4D3/LuaSnip")

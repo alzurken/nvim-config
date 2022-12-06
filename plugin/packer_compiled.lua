@@ -99,55 +99,10 @@ _G.packer_plugins = {
     path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
-  ["cmp-commit"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-commit",
-    url = "https://github.com/Dosx001/cmp-commit"
-  },
-  ["cmp-conventionalcommits"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-conventionalcommits",
-    url = "https://github.com/davidsierradz/cmp-conventionalcommits"
-  },
-  ["cmp-fuzzy-buffer"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-fuzzy-buffer",
-    url = "https://github.com/tzachar/cmp-fuzzy-buffer"
-  },
-  ["cmp-fuzzy-path"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-fuzzy-path",
-    url = "https://github.com/tzachar/cmp-fuzzy-path"
-  },
-  ["cmp-git"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-git",
-    url = "https://github.com/petertriho/cmp-git"
-  },
-  ["cmp-nvim-lua"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
-  },
-  ["cmp-plugins"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-plugins",
-    url = "https://github.com/KadoBOT/cmp-plugins"
-  },
-  ["cmp-rg"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-rg",
-    url = "https://github.com/lukas-reineke/cmp-rg"
-  },
-  ["cmp-treesitter"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/cmp-treesitter",
-    url = "https://github.com/ray-x/cmp-treesitter"
   },
   cmp_luasnip = {
     loaded = true,
@@ -158,11 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cold/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["fuzzy.nvim"] = {
-    loaded = true,
-    path = "/home/cold/.local/share/nvim/site/pack/packer/start/fuzzy.nvim",
-    url = "https://github.com/tzachar/fuzzy.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
