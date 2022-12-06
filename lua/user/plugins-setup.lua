@@ -57,6 +57,8 @@ return packer.startup(function(use)
   use("hrsh7th/cmp-path")
   use("hrsh7th/cmp-cmdline")
   use("saadparwaiz1/cmp_luasnip")
+  use("hrsh7th/cmp-nvim-lsp")
+
 --  use("petertriho/cmp-git")
 --  use("davidsierradz/cmp-conventionalcommits")
 --  use("Dosx001/cmp-commit")
@@ -66,13 +68,18 @@ return packer.startup(function(use)
 --  use("tzachar/cmp-fuzzy-path")
 --  use("lukas-reineke/cmp-rg")
 
---  use("hrsh7th/cmp-nvim-lua")
+  use("hrsh7th/cmp-nvim-lua")
 --  use("KadoBOT/cmp-plugins")
 --  use("ray-x/cmp-treesitter")
 
   -- snippets
   use("L3MON4D3/LuaSnip")
   use("rafamadriz/friendly-snippets")
+
+  -- LSP config
+  use("neovim/nvim-lspconfig")
+  use ("williamboman/mason.nvim")
+  use ("williamboman/mason-lspconfig.nvim")
 
   if packer_bootstrap then
     require("packer").sync()
