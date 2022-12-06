@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -28,7 +29,8 @@ return packer.startup(function(use)
   use("MunifTanjim/nui.nvim")
   
   -- color schema
-  use("bluz71/vim-nightfly-guicolors")
+  --use("bluz71/vim-nightfly-guicolors")
+  use "folke/tokyonight.nvim"
 
   use("christoomey/vim-tmux-navigator")
   use("tpope/vim-surround")
@@ -80,6 +82,12 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig")
   use ("williamboman/mason.nvim")
   use ("williamboman/mason-lspconfig.nvim")
+
+  -- Treesitter config
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
 
   if packer_bootstrap then
     require("packer").sync()
