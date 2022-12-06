@@ -1,29 +1,66 @@
-vim.g.mapleader = " "
+local opts = {noremap = true, silent = true}
 
-local keymap = vim.keymap
+local term_opts = {silent = true}
+
+local keymap = vim.api.nvim_set_keymap
+
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 --general keymaps
 
-keymap.set("n", "x", '"_x')
+keymap("n", "x", '"_x', opts)
 
-keymap.set("n", "<leader>sv", "<C-w>v")
-keymap.set("n", "<leader>sh", "<C-w>s")
-keymap.set("n", "<leader>se", "<C-w>=")
-keymap.set("n", "<leader>sx", ":close<CR>")
+-- move between windows
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap.set("n", "<leader>to", ":tabnew<CR>")
-keymap.set("n", "<leader>tx", ":tabclose<CR>")
-keymap.set("n", "<leader>tn", ":tabn<CR>")
-keymap.set("n", "<leader>tp", ":tabp<CR>")
+-- resize windows
+keymap("n", "<C-Up>", ":resize -2<cr>", opts)
+keymap("n", "<C-Down>", ":resize +2<cr>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
+-- buffer navigation
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- indent whole visual block
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
+
+-- alt move lines
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+
+-- don't override clipboard while inserting in visual
+keymap("v", "p", '"_dP', opts)
+
+
+--keymap("n", "<leader>sv", "<C-w>v", opts)
+--keymap("n", "<leader>sh", "<C-w>s", opts)
+--keymap("n", "<leader>se", "<C-w>=", opts)
+--keymap("n", "<leader>sx", ":close<CR>", opts)
+
+--keymap("n", "<leader>to", ":tabnew<CR>", opts)
+--keymap("n", "<leader>tx", ":tabclose<CR>", opts)
+--keymap("n", "<leader>tn", ":tabn<CR>", opts)
+--keymap("n", "<leader>tp", ":tabp<CR>", opts)
+
+-- keymap("n", "<leader>sm", ":MaximizerToggle<CR>", opts)
 
 -- neo-tree
-keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
+keymap("n", "<leader>e", ":Neotree toggle<CR>", opts)
+--keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>")
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
