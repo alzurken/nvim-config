@@ -1,6 +1,6 @@
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
-local term_opts = {silent = true}
+local term_opts = { silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
@@ -41,7 +41,6 @@ keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 -- don't override clipboard while inserting in visual
 keymap("v", "p", '"_dP', opts)
 
-
 --keymap("n", "<leader>sv", "<C-w>v", opts)
 --keymap("n", "<leader>sh", "<C-w>s", opts)
 --keymap("n", "<leader>se", "<C-w>=", opts)
@@ -65,3 +64,6 @@ keymap("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>bb", ":Bdelete<CR>", opts)

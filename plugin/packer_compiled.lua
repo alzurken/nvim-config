@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/cold/.local/share/nvim/site/pack/packer/start/Bufferline.nvim",
+    url = "https://github.com/akinsho/Bufferline.nvim"
+  },
   ["Comment.nvim"] = {
     loaded = true,
     path = "/home/cold/.local/share/nvim/site/pack/packer/start/Comment.nvim",
@@ -149,6 +154,16 @@ _G.packer_plugins = {
     path = "/home/cold/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/cold/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/cold/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/cold/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -163,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cold/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/cold/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -198,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cold/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-bbye"] = {
+    loaded = true,
+    path = "/home/cold/.local/share/nvim/site/pack/packer/start/vim-bbye",
+    url = "https://github.com/moll/vim-bbye"
   },
   ["vim-maximizer"] = {
     loaded = true,
