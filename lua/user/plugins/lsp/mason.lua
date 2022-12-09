@@ -3,9 +3,11 @@ local servers = {
 	"cssls",
 	"html",
 	"tsserver",
-	"pyright",
+	-- "pyright",
 	-- "bashls",
 	"jsonls",
+  "pylsp",
+  -- "sourcery",
 	-- "yamlls",
 	--"eslint",
 }
@@ -38,6 +40,7 @@ local opts = {}
 
 for _, server in pairs(servers) do
 	opts = {
+    on_init = require("user.plugins.lsp.handlers").on_init,
 		on_attach = require("user.plugins.lsp.handlers").on_attach,
 		capabilities = require("user.plugins.lsp.handlers").capabilities,
 	}
