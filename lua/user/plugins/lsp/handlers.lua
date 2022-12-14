@@ -112,7 +112,7 @@ local function get_python_path(workspace)
 end
 
 M.on_init = function(client)
-	if client.name == "pylsp" then
+	if client.name == "pyright" then
 		client.config.settings.python.pythonPath = get_python_path(client.config.root_dir)
 	end
 end
