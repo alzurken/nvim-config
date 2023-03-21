@@ -77,10 +77,6 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
-	if client.name == "sumneko_lua" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
-
 	lsp_keymap(bufnr)
 
 	local status_ok, illuminate = pcall(require, "illuminate")
