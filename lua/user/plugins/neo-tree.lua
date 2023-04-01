@@ -22,7 +22,9 @@ neotree.setup({
 	window = {
 		position = "left",
 		width = 40,
-		mappings = {},
+  	mappings = {
+      ["Z"] = "expand_all_nodes"
+    },
 	},
 	filesystem = {
 		follow_current_file = true,
