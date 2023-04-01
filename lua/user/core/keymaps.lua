@@ -24,9 +24,10 @@ keymap("n", "<C-Down>", ":resize +2<cr>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 
--- buffer navigation
+
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>x", ":bd<CR>:bnext<CR>", opts)
 
 -- indent whole visual block
 keymap("v", "<", "<gv", opts)
@@ -43,8 +44,8 @@ keymap("v", "p", '"_dP', opts)
 
 --keymap("n", "<leader>sv", "<C-w>v", opts)
 --keymap("n", "<leader>sh", "<C-w>s", opts)
---keymap("n", "<leader>se", "<C-w>=", opts)
 --keymap("n", "<leader>sx", ":close<CR>", opts)
+--keymap("n", "<leader>se", "<C-w>=", opts)
 
 --keymap("n", "<leader>to", ":tabnew<CR>", opts)
 --keymap("n", "<leader>tx", ":tabclose<CR>", opts)
