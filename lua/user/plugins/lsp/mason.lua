@@ -6,6 +6,7 @@ local servers = {
 	"pyright",
 	"gopls",
 	"jsonls",
+  "jdtls",
   -- "pylsp",
   -- "sourcery",
 	-- "yamlls",
