@@ -61,7 +61,13 @@ local function lsp_keymap(bufnr)
 	keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 	keymap(bufnr, "n", "<leader>ll", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-	keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr> <cmd>lua vim.lsp.buf.code_action({source = {organizeImports = true}, apply = true})<cr>", opts)
+	keymap(
+		bufnr,
+		"n",
+		"<leader>lf",
+		"<cmd>lua vim.lsp.buf.format{ async = true }<cr> <cmd>lua vim.lsp.buf.code_action({source = {organizeImports = true}, apply = true})<cr>",
+		opts
+	)
 	keymap(bufnr, "n", "<leader>li", "<cmd>LspInfo<cr>", opts)
 	keymap(bufnr, "n", "<leader>lI", "<cmd>LspInstallInfo<cr>", opts)
 	keymap(bufnr, "n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
@@ -110,6 +116,12 @@ end
 M.on_init = function(client)
 	if client.name == "pyright" then
 		client.config.settings.python.pythonPath = get_python_path(client.config.root_dir)
+	end
+	if client.name == "jdtls" then
+		local config = {
+			root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
+		}
+		require("jdtls").start_or_attach(config)
 	end
 end
 

@@ -97,6 +97,8 @@ return packer.startup(function(use)
 	use("akinsho/Bufferline.nvim")
 	use("moll/vim-bbye")
 
+  use("mfussenegger/nvim-jdtls")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
