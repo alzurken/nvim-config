@@ -99,6 +99,10 @@ return packer.startup(function(use)
 
   use("mfussenegger/nvim-jdtls")
 
+use ({"akinsho/toggleterm.nvim", tag = '*',  config = function()
+  require("toggleterm").setup()
+end})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

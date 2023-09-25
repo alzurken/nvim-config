@@ -28,6 +28,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>x", ":bd<CR>:bnext<CR>", opts)
+keymap("n", "<leader>h", ":%bd|e#|normal`\"<CR>:bnext<CR>:bd<CR>", opts)
 
 -- indent whole visual block
 keymap("v", "<", "<gv", opts)
