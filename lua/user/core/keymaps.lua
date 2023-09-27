@@ -28,7 +28,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>x", ":bd<CR>:bnext<CR>", opts)
-keymap("n", "<leader>h", ":%bd|e#|normal`\"<CR>:bnext<CR>:bd<CR>", opts)
+keymap("n", "<leader>h", ":%bd!|e#|normal`\"<CR>:bnext<CR>:bd<CR>", opts)
 
 -- indent whole visual block
 keymap("v", "<", "<gv", opts)
@@ -60,7 +60,7 @@ keymap("n", "<leader>e", ":Neotree toggle<CR>", opts)
 --keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files hidden=true no_ignore=true<CR>", opts)
 keymap("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
